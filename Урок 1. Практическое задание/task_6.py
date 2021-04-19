@@ -8,3 +8,8 @@
 
 Подсказка: используйте ф-ции chr() и ord()
 """
+
+letter = str(input("Введите букву: "))
+letter_num = ord(letter.lower()) - ord("`")
+
+print(f"Буква {letter} находится на {letter_num}-ой позиции")
