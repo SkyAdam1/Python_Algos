@@ -10,3 +10,14 @@
 В обоих случаях программа должна вывести корректный результат.
 В обоих случаях он 24, но никак не -24
 """
+
+
+letter1 = str(input())
+letter2 = str(input())
+letter_min = ord(letter1.lower()) - ord("`")
+letter_max = ord(letter2.lower()) - ord("`")
+print(
+    f"Буква {letter1} на {letter_min} месте, буква {letter2} на {letter_max} месте\n"
+    f"Между буквами символов: {abs(letter_min - letter_max) - 1}"
+)
+
