@@ -15,3 +15,14 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+
+def func(a: int, even=0, odd=0):
+    while a > 0:
+        return (
+            func(a // 10, even + 1, odd) if not a % 2 else func(a // 10, even, odd + 1)
+        )
+    print(f"Четных - {even} , нечетных - {odd}")
+
+
+func(1212)
