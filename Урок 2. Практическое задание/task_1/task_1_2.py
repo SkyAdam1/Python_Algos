@@ -33,3 +33,24 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+while 1 == 1:
+    oper = input("Выберите действие(+, -, *, / или 0 для выхода из программы): ")
+    if oper == "0":
+        break
+    if oper in ["+", "-", "*", "/"]:
+        num1 = input("Введите первое число: ")
+        num2 = input("Введите второе число: ")
+        if oper == "+":
+            print(f"{num1} + {num2} = {num1 + num2}")
+        elif oper == "-":
+            print(f"{num1} - {num2} = {num1 - num2}")
+        elif oper == "*":
+            print(f"{num1} * {num2} = {num1 * num2}")
+        elif oper == "/":
+            if num2 != 0:
+                print(f"{num1} / {num2} = {num1 / num2}")
+            else:
+                print("На ноль делить нельзя!")
+    else:
+        print("Неверный знак операции!")
