@@ -14,3 +14,9 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+
+def reverse_int(n: int, m=0):
+    m = m * 10 + n % 10
+    n //= 10
+    return m if not n else reverse_int(n, m)
