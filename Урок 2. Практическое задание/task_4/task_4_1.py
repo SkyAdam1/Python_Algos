@@ -8,3 +8,5 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ ЦИКЛ
 """
+integer = int(input("Введите число: "))
+print(f"Количество элементов - {integer}, их сумма - {sum(i for i in range(integer))}")
