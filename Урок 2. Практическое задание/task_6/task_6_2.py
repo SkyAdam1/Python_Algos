@@ -7,3 +7,22 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+from random import randint
+
+
+def random(attempts=10, a=randint(0, 100)):
+    a = randint(0 , 100)
+    attempts = 10
+    if attempts == 0:
+        print(f"Вы не угадали, это было число {a}")
+    b = int(input("Угадайте число: "))
+    if a == b:
+        print(f"Вы угадали, это было число {b}")
+    elif a > b:
+        attempts -= 1
+        print(f"Загаданное число больше, чем {b}")
+    elif a < b:
+        attempts -= 1
+        print(f"Загаданное число меньше, чем {b}")
+
+random()
