@@ -12,3 +12,15 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+count_num = int(input("Сколько будет чисел? "))
+c = int(input("Какую цифру будем считать? "))
+count = 0
+for i in range(1, count_num + 1):
+    m = int(input(f"Введите число {i} "))
+    while m > 0:
+        if m % 10 == c:
+            count += 1
+        m = m // 10
+
+print(f"Было введено {count} цифр {c}")

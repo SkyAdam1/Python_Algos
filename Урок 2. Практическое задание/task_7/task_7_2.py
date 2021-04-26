@@ -5,3 +5,11 @@
 
 ЗДЕСЬ ДОЛЖНА БЫТЬ РЕАЛИЗАЦИЯ ЧЕРЕЗ РЕКУРСИЮ
 """
+
+
+def sets(n: int, min_n=1, set_sum=0):
+    print(
+        sets(n, min_n + 1, set_sum + min_n)
+        if min_n < n
+        else (set_sum, n * (n + 1) // 2)
+    )

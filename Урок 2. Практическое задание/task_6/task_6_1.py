@@ -10,7 +10,7 @@
 
 from random import randint
 
-a = randint(0 , 100)
+a = randint(0, 100)
 attempts = 10
 while True:
     if attempts == 0:
@@ -26,4 +26,3 @@ while True:
     elif a < b:
         attempts -= 1
         print(f"Загаданное число меньше, чем {b}")
-    
