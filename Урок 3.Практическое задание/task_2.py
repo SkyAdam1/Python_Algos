@@ -10,3 +10,8 @@
 Пример:
 Исходный массив: [8, 3, 15, 6, 4, 2], результат: [0, 3, 4, 5]
 """
+from random import randint
+
+X = [randint(0, 20) for i in range(randint(5, 10))]
+Z = [i for i, x in enumerate(X) if not x % 2]
+print(f"Исходный массив: {X}, результат: {Z}")
