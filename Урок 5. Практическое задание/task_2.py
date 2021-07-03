@@ -11,3 +11,19 @@
 Также попробуйте решить задачу вообще без collections и применить только ваши знания по ООП
 (в частности по перегрузке методов)
 """
+class Num:
+    def __init__(self, num):
+        self.number = num
+
+    def __str__(self):
+        return self.number
+
+    def __add__(self, other):
+        return Num(f"{int(self.number, 16) + int(other.number, 16):X}")
+
+    def __mul__(self, other):
+        return Num(f"{int(self.number, 16) * int(other.number, 16):X}")
+
+        
+print(Num("1e2") + Num("1c4f"))
+print(Num("1e2") * Num("1c4f"))
