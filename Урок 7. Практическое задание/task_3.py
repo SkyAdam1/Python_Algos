@@ -6,3 +6,31 @@
 массива. Но если это слишком сложно, то используйте метод сортировки,
 который не рассматривался на уроках
 """
+from random import randint, choice
+
+
+def median(orig_list, mid, pivot_list=choice):
+    if len(orig_list) == 1:
+        return orig_list[0]
+    pivot = pivot_list(orig_list)
+    left = [itm for itm in orig_list if itm < pivot]
+    right = [itm for itm in orig_list if itm > pivot]
+    pivots = [itm for itm in orig_list if itm == pivot]
+
+    if mid < len(left):
+        return median(left, mid)
+    elif mid < len(left) + len(pivots):
+        return pivots[0]
+    else:
+        return median(right, mid - len(left) - len(pivots))
+
+
+NUMBER_OF_ITM = int(input("Введите число элементов: "))
+if NUMBER_OF_ITM % 2 == 1:
+    ORIG_LIST = [randint(0, 100) for _ in range(NUMBER_OF_ITM)]
+    print(ORIG_LIST)
+    print(f"Медиана данного списка: {median(ORIG_LIST, (len(ORIG_LIST) // 2))}")
+    print("Для наглядности отсортированный список:")
+    print(sorted(ORIG_LIST))
+else:
+    print("Необходимо вводить количество элементов равное 2m + 1")

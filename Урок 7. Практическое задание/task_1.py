@@ -9,3 +9,18 @@
 Подсказка: обратите внимание, сортируем не по возрастанию, как в примере,
 а по убыванию
 """
+from random import randint
+
+
+def bubble(array):
+    for i in range(len(array) - 1, 0, -1):
+        for n in range(i):
+            if array[n] < array[n + 1]:
+                array[n], array[n + 1] = array[n + 1], array[n]
+    print(f"{array}")
+
+
+numbers = [randint(-100, 100) for i in range(10)]
+print(f"{numbers}")
+
+bubble(numbers)
